@@ -1,10 +1,10 @@
-package com.dbd.tp2223;
+package com.tpdbd.cardpurchases;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Tp2223ApplicationTests {
+class CardpurchasesApplicationTests {
 
 	@Test
 	void contextLoads() {
