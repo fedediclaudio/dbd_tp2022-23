@@ -1,5 +1,7 @@
 services:
   MySQL:
+    # environment:
+    #   MYSQL_PORT: 3306
     image: mysql:5.7
     ports:
       - 3306:3306
@@ -8,7 +10,12 @@ services:
       - MYSQL_DATABASE=tpfinal22
     healthcheck:
       # This requires mysqladmin installed on local machine
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-P", "3306"]
+      #test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-P", "3306"]
+      
+      # Alternative version for systems without mysqladmin, but with curl command
+      test: ["CMD", "curl", "-f", "http://localhost:3306" ]
+      
       interval: 3s
       timeout: 20s
       retries: 5
+      
