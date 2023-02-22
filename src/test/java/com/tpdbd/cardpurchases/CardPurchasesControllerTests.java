@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class ApiControllerTests {
+public class CardPurchasesControllerTests {
     private final static String BASE_URI = "http://localhost";
 
     @LocalServerPort
